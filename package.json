@@ -1,0 +1,43 @@
+{
+  // This file tells Node.js what packages (libraries) your project needs
+  // Think of it like a shopping list for your project's dependencies
+  
+  "name": "samtronics-mpesa",
+  // The name of your project - can be anything
+  
+  "version": "1.0.0",
+  // Version number - start with 1.0.0 for first release
+  
+  "description": "Samtronics Solutions - LED Signages with M-Pesa Integration",
+  // A short description of what your project does
+  
+  "main": "server.js",
+  // The main file that will start your server - this is like the "engine" of your website
+  
+  "scripts": {
+    // These are shortcuts you can run in terminal
+    "start": "node server.js",
+    // "npm start" will run this - starts your server for production
+    
+    "dev": "nodemon server.js"
+    // "npm run dev" will run this - starts server with auto-restart for development
+  },
+  
+  "dependencies": {
+    // These are packages your project NEEDS to run
+    "express": "^4.18.2",
+    // Express is a web framework - handles routing, serving files, etc.
+    
+    "axios": "^1.6.0",
+    // Axios helps make HTTP requests - we use it to talk to Safaricom's M-Pesa API
+    
+    "cors": "^2.8.5"
+    // CORS allows your website to make requests to your server - security feature
+  },
+  
+  "devDependencies": {
+    // These are packages only needed during development
+    "nodemon": "^3.0.1"
+    // Nodemon automatically restarts your server when you make changes - saves time
+  }
+}

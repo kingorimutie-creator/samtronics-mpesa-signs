@@ -5,7 +5,7 @@
 
 // ========== COMPLETE PRODUCT DATA WITH ALL 11 IMAGES ==========
 const products = [
-  { id: 'mpesa-board', img: 'images/mpesa_1200-edited.jpg', alt: 'M-PESA LED Board for mobile money shops - bright green LED signage', shortDesc: 'High-visibility M-PESA display for mobile money agents.', longDesc: 'Bright, durable LED board perfect for M-PESA outlets.', price: 3000, name: 'M-PESA LED Board' },
+  { id: 'mpesa-board', img: 'images/mpesa_10-edited.jpg', alt: 'M-PESA LED Board for mobile money shops - bright green LED signage', shortDesc: 'High-visibility M-PESA display for mobile money agents.', longDesc: 'Bright, durable LED board perfect for M-PESA outlets.', price: 3000, name: 'M-PESA LED Board' },
   { id: 'mpesa-shop', img: 'images/20260320_185819-edited.jpg', alt: 'M-PESA Shop Sign with professional LED display', shortDesc: 'Professional shop sign with M-PESA branding.', longDesc: 'Affordable and eye-catching M-PESA signage.', price: 3000, name: 'M-PESA Shop Sign' },
   { id: 'blinking-sign', img: 'images/blinking-sign-edited.jpg', alt: 'Custom Blinking LED Sign with animated effects', shortDesc: 'Attention-grabbing animated LED signs.', longDesc: 'Customizable blinking signs for any business.', price: 4500, name: 'Custom Blinking Signs' },
   { id: 'led-display', img: 'images/led-display-edited.jpg', alt: 'Outdoor LED Display for business signage', shortDesc: 'Weatherproof outdoor digital signage.', longDesc: 'Large format LED displays for events.', price: 4500, name: 'Outdoor LED Displays' },

@@ -1,9 +1,9 @@
 /* ============================================ */
 /* SAMTRONICS SOLUTIONS - MAIN STYLESHEET */
-/* SEO Optimized | Dark/Light Mode | Responsive */
+/* SEO Optimized | Responsive | Dark Mode */
 /* ============================================ */
 
-/* ========== CSS VARIABLES - Light Mode (Default) ========== */
+/* ========== CSS VARIABLES ========== */
 :root {
   --bg: #faf8f5;
   --text: #222b33;
@@ -13,8 +13,6 @@
   --primary: #367861;
   --primary-light: #4a9a7c;
   --primary-dark: #2a6452;
-  --cta-bg: #367861;
-  --cta-hover: #2a6452;
   --shadow: 0 12px 30px rgba(28, 36, 50, 0.12);
   --shadow-sm: 0 4px 12px rgba(28, 36, 50, 0.08);
   --accent-green: #39ff14;
@@ -24,7 +22,6 @@
   --success: #00e676;
 }
 
-/* ========== DARK MODE OVERRIDES ========== */
 body.dark {
   --bg: #12171e;
   --text: #e4eaf3;
@@ -37,7 +34,7 @@ body.dark {
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* ========== GLOBAL RESET & BASE ========== */
+/* ========== GLOBAL RESET ========== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -48,7 +45,7 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }
@@ -72,6 +69,7 @@ a {
 
 a:hover {
   color: var(--primary-light);
+  text-decoration: underline;
 }
 
 /* ========== HEADER & NAVIGATION ========== */
@@ -92,7 +90,7 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--primary);
 }
@@ -117,6 +115,7 @@ nav a {
 nav a:hover {
   color: var(--primary);
   background: var(--surface-alt);
+  text-decoration: none;
 }
 
 #theme-toggle {
@@ -220,7 +219,6 @@ nav a:hover {
   background: var(--accent-green-dark);
 }
 
-/* Hero Controls */
 .hero-controls {
   position: absolute;
   top: 50%;
@@ -251,7 +249,6 @@ nav a:hover {
   color: #000;
 }
 
-/* Hero Dots */
 .hero-dots {
   position: absolute;
   bottom: 15px;
@@ -277,7 +274,7 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* ========== SECTION COMMON STYLES ========== */
+/* ========== SECTION COMMON ========== */
 .products,
 .gallery,
 .quote,
@@ -292,12 +289,19 @@ nav a:hover {
 .quote h3,
 .contact h3 {
   color: var(--primary);
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
-/* ========== PRODUCTS SECTION ========== */
+.gallery-description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+/* ========== PRODUCTS ========== */
 .product-search {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -373,7 +377,7 @@ nav a:hover {
 }
 
 .add-to-cart {
-  background: var(--cta-bg);
+  background: var(--primary);
   color: white;
   border: none;
   padding: 0.6rem 1rem;
@@ -386,7 +390,7 @@ nav a:hover {
 }
 
 .add-to-cart:hover {
-  background: var(--cta-hover);
+  background: var(--primary-dark);
 }
 
 .no-results {
@@ -395,7 +399,7 @@ nav a:hover {
   color: var(--danger);
 }
 
-/* ========== GALLERY SECTION ========== */
+/* ========== GALLERY ========== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -464,7 +468,7 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
-/* ========== CONTACT FORM ========== */
+/* ========== FORM ========== */
 form {
   display: grid;
   gap: 0.85rem;
@@ -509,13 +513,13 @@ button[type="submit"]:hover,
   background: var(--accent-green-dark);
 }
 
-/* ========== CONTACT INFO ========== */
+/* ========== CONTACT ========== */
 .contact {
   text-align: center;
 }
 
 .contact address p {
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
 }
 
 .contact a {
@@ -541,7 +545,7 @@ button[type="submit"]:hover,
 footer {
   text-align: center;
   background: var(--surface);
-  padding: 1rem;
+  padding: 1.5rem;
   border-top: 1px solid var(--border);
   margin-top: 1rem;
 }
@@ -551,7 +555,7 @@ footer p {
   font-size: 0.85rem;
 }
 
-/* ========== MODAL (CART) ========== */
+/* ========== MODAL ========== */
 .modal {
   display: none;
   position: fixed;
@@ -605,9 +609,147 @@ footer p {
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.75rem;
+  transition: opacity 0.2s;
 }
 
-/* ========== LIGHTBOX (IMAGE ZOOM) ========== */
+.remove-cart-item:hover {
+  opacity: 0.8;
+}
+
+/* ========== PAYMENT SECTION ========== */
+.payment-option {
+  margin-bottom: 1rem;
+}
+
+.payment-option h5 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.payment-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.mpesa-btn {
+  background: var(--accent-green);
+  color: #000;
+  padding: 0.8rem;
+  border-radius: 40px;
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.mpesa-btn:hover {
+  transform: scale(1.02);
+  background: var(--accent-green-dark);
+}
+
+.mpesa-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.till-box {
+  text-align: center;
+  padding: 1rem;
+  background: var(--surface-alt);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.till-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-green);
+  margin: 0.5rem 0;
+}
+
+.copy-btn {
+  background: var(--accent-green);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.copy-btn:hover {
+  transform: scale(1.02);
+}
+
+.verify-section {
+  margin-top: 1rem;
+}
+
+.verify-btn {
+  width: 100%;
+  background: var(--accent-green);
+  color: #000;
+  padding: 0.8rem;
+  border-radius: 40px;
+  margin-top: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.verify-btn:hover {
+  transform: scale(1.02);
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 1rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+  background: var(--primary-dark);
+}
+
+.payment-status {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.payment-status.success {
+  background: rgba(0, 230, 118, 0.2);
+  color: var(--success);
+}
+
+.payment-status.error {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--danger);
+}
+
+.payment-status.pending {
+  background: rgba(255, 165, 0, 0.2);
+  color: var(--warning);
+}
+
+/* ========== LIGHTBOX ========== */
 .image-lightbox {
   position: fixed;
   inset: 0;
@@ -681,7 +823,7 @@ footer p {
   transform: scale(1.05);
 }
 
-/* ========== UTILITY CLASSES ========== */
+/* ========== UTILITY ========== */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -693,7 +835,7 @@ footer p {
   border: 0;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: inline-flex;
@@ -752,12 +894,16 @@ footer p {
   .gallery h3,
   .quote h3,
   .contact h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .modal-content {
     width: 95%;
     padding: 1rem;
+  }
+
+  .till-number {
+    font-size: 1.4rem;
   }
 }
 
@@ -776,4 +922,24 @@ footer p {
 .product,
 .gallery-item {
   animation: fadeIn 0.4s ease-out;
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+  .hero-controls,
+  .mobile-menu-toggle,
+  #theme-toggle,
+  .add-to-cart,
+  .modal {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
 }
